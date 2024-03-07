@@ -10,15 +10,12 @@ jobs:
     strategy:
       matrix:
         runner:
-          - macos-latest
-          - ubuntu-latest
+          - macos-latest-4-cores
+          - ubuntu-latest-4-cores
     runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v22
-      - uses: DeterminateSystems/magic-nix-cache-action@v2
+      - uses: DeterminateSystems/magic-nix-cache-action@v3
       - name: Check
-        # Build parallelism is reduced here to increase probability of build success.
-        # This decision is influenced by the opinion that the speed of CI is not very
-        # important for this repository.
-        run: nix flake check ./main --max-jobs 1
+        run: nix flake check ./main --keep-going
