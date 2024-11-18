@@ -347,6 +347,33 @@ in
       ] ++ (if enableHLS then [ hls ] else [ ]);
     };
 
+  ghc-9-8-3 =
+    { packageSelection, enableHLS }:
+    let
+      nixpkgs = import inputs.nixpkgs-unstable-2024-11-18 {
+        inherit system;
+        config = { };
+      };
+      name = "ghc983";
+      inherit (nixpkgs) haskell;
+      haskellPackages = haskell.packages.${name};
+      ghcWithPackages = haskellPackages.ghcWithPackages packageSelection;
+      inherit (haskell.lib) justStaticExecutables;
+      weeder = justStaticExecutables haskellPackages.weeder;
+      hls = nixpkgs.haskell-language-server.override { supportedGhcVersions = [ "983" ]; };
+      cabal = nixpkgs.cabal-install;
+      stack = import ./stack.nix { inherit nixpkgs; };
+    in
+    symlinkJoin {
+      inherit name;
+      paths = [
+        ghcWithPackages
+        weeder
+        cabal
+        stack
+      ] ++ (if enableHLS then [ hls ] else [ ]);
+    };
+
   ghc-9-10-1 =
     { packageSelection, enableHLS }:
     let
