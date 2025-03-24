@@ -23,5 +23,5 @@ in
 {
   stack-lint-extra-deps-1-2-2 = versionCheck "1.2.2.1" packages.stack-lint-extra-deps-1-2-2;
   stack-lint-extra-deps-1-2-5 = versionCheck "1.2.5.0" packages.stack-lint-extra-deps-1-2-5;
-  stack-lint-extra-deps-1-3-0 = versionCheck "1.3.0.1" packages.stack-lint-extra-deps-1-3-0;
+  stack-lint-extra-deps-1-3-0 = versionCheck "1.3.0.8" packages.stack-lint-extra-deps-1-3-0;
 }
