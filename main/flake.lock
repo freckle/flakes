@@ -402,11 +402,11 @@
         "stacklock2nix": "stacklock2nix"
       },
       "locked": {
-        "lastModified": 1742840028,
-        "narHash": "sha256-1zMbaz1lTP/R70jvVCQclkNTbvfsyFIlA8qYd0OdmJ4=",
+        "lastModified": 1743532671,
+        "narHash": "sha256-9yecUyY1YMfVRxM75++UPFr1ZPg/FfCddMoOaNTQWuI=",
         "owner": "freckle",
         "repo": "stack-lint-extra-deps",
-        "rev": "7c3d047b4faf6ff946197097a4df4cd31f0b7373",
+        "rev": "bff5aacdd2371f39aa8143cb8f8804e725d4dd91",
         "type": "github"
       },
       "original": {
