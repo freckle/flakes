@@ -364,13 +364,35 @@ in
   ghc-9-10-1 =
     { packageSelection, enableHLS }:
     let
-      nixpkgs = inputs.nixpkgs-24-11.legacyPackages.${system};
+      nixpkgs = inputs.nixpkgs-25-05.legacyPackages.${system};
       name = "ghc9101";
       inherit (nixpkgs) haskell;
       haskellPackages = haskell.packages.${name};
       ghcWithPackages = haskellPackages.ghcWithPackages packageSelection;
       inherit (haskell.lib) justStaticExecutables;
       hls = nixpkgs.haskell-language-server.override { supportedGhcVersions = [ "9101" ]; };
+      cabal = nixpkgs.cabal-install;
+      stack = import ./stack.nix { inherit nixpkgs; };
+    in
+    symlinkJoin {
+      inherit name;
+      paths = [
+        ghcWithPackages
+        cabal
+        stack
+      ] ++ (if enableHLS then [ hls ] else [ ]);
+    };
+
+  ghc-9-10-2 =
+    { packageSelection, enableHLS }:
+    let
+      nixpkgs = inputs.nixpkgs-haskell-updates.legacyPackages.${system};
+      name = "ghc9102";
+      inherit (nixpkgs) haskell;
+      haskellPackages = haskell.packages.${name};
+      ghcWithPackages = haskellPackages.ghcWithPackages packageSelection;
+      inherit (haskell.lib) justStaticExecutables;
+      hls = nixpkgs.haskell-language-server.override { supportedGhcVersions = [ "9102" ]; };
       cabal = nixpkgs.cabal-install;
       stack = import ./stack.nix { inherit nixpkgs; };
     in
