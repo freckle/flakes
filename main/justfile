@@ -1,6 +1,6 @@
 build x:
-  nix build ./.#packages.$(nix eval --impure --expr "builtins.currentSystem").{{x}} --no-link --print-out-paths --print-build-logs
+  env NIXPKGS_ALLOW_INSECURE=1 nix build --impure ./.#packages.$(nix eval --impure --expr "builtins.currentSystem").{{x}} --no-link --print-out-paths --print-build-logs
 
 # Run an individual check
 check x:
-  nix build ./.#checks.$(nix eval --impure --expr "builtins.currentSystem").{{x}} --no-link --print-out-paths --print-build-logs
+  env NIXPKGS_ALLOW_INSECURE=1 nix build --impure ./.#checks.$(nix eval --impure --expr "builtins.currentSystem").{{x}} --no-link --print-out-paths --print-build-logs
