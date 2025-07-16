@@ -118,25 +118,25 @@ in
     packageName = "ghc-9-8-1";
     ghc = "9.8.1";
     weeder = "2.9.0";
-    hls = "2.9.0.0";
+    hls = "2.10.0.0";
   };
   ghc-9-8-2 = ghcCheck {
     packageName = "ghc-9-8-2";
     ghc = "9.8.2";
     weeder = "2.9.0";
-    hls = "2.9.0.0";
+    hls = "2.10.0.0";
   };
   ghc-9-8-3 = ghcCheck {
     packageName = "ghc-9-8-3";
     ghc = "9.8.3";
     weeder = "2.9.0";
-    hls = "2.9.0.0";
+    hls = "2.10.0.0";
   };
   ghc-9-8-4 = ghcCheck {
     packageName = "ghc-9-8-4";
     ghc = "9.8.4";
     weeder = "2.9.0";
-    hls = "2.9.0.0";
+    hls = "2.10.0.0";
   };
   ghc-9-10-1 = ghcCheck {
     packageName = "ghc-9-10-1";
