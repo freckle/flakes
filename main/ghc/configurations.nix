@@ -267,7 +267,7 @@ in
   ghc-9-8-1 =
     { packageSelection, enableHLS }:
     let
-      nixpkgs = inputs.nixpkgs-24-11.legacyPackages.${system};
+      nixpkgs = inputs.nixpkgs-25-05.legacyPackages.${system};
       name = "ghc981";
       inherit (nixpkgs) haskell;
       haskellPackages = haskell.packages.${name};
@@ -291,7 +291,7 @@ in
   ghc-9-8-2 =
     { packageSelection, enableHLS }:
     let
-      nixpkgs = inputs.nixpkgs-24-11.legacyPackages.${system};
+      nixpkgs = inputs.nixpkgs-25-05.legacyPackages.${system};
       name = "ghc982";
       inherit (nixpkgs) haskell;
       haskellPackages = haskell.packages.${name};
@@ -315,7 +315,7 @@ in
   ghc-9-8-3 =
     { packageSelection, enableHLS }:
     let
-      nixpkgs = inputs.nixpkgs-24-11.legacyPackages.${system};
+      nixpkgs = inputs.nixpkgs-25-05.legacyPackages.${system};
       name = "ghc983";
       inherit (nixpkgs) haskell;
       haskellPackages = haskell.packages.${name};
@@ -339,8 +339,7 @@ in
   ghc-9-8-4 =
     { packageSelection, enableHLS }:
     let
-      nixpkgs = # 2025-01-03
-        (getFlake "github:nixos/nixpkgs/d3780c92e64472e8f9aa54f7bbb0dd4483b98303").legacyPackages.${system};
+      nixpkgs = inputs.nixpkgs-25-05.legacyPackages.${system};
       name = "ghc984";
       inherit (nixpkgs) haskell;
       haskellPackages = haskell.packages.${name};
