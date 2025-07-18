@@ -94,25 +94,25 @@ in
     packageName = "ghc-9-6-3";
     ghc = "9.6.3";
     weeder = "2.9.0";
-    hls = "2.9.0.0";
+    hls = "2.10.0.0";
   };
   ghc-9-6-4 = ghcCheck {
     packageName = "ghc-9-6-4";
     ghc = "9.6.4";
     weeder = "2.9.0";
-    hls = "2.9.0.0";
+    hls = "2.10.0.0";
   };
   ghc-9-6-5 = ghcCheck {
     packageName = "ghc-9-6-5";
     ghc = "9.6.5";
     weeder = "2.9.0";
-    hls = "2.9.0.0";
+    hls = "2.10.0.0";
   };
   ghc-9-6-6 = ghcCheck {
     packageName = "ghc-9-6-6";
     ghc = "9.6.6";
     weeder = "2.9.0";
-    hls = "2.9.0.0";
+    hls = "2.10.0.0";
   };
   ghc-9-8-1 = ghcCheck {
     packageName = "ghc-9-8-1";
