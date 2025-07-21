@@ -82,13 +82,13 @@ in
     packageName = "ghc-9-4-7";
     ghc = "9.4.7";
     weeder = "2.9.0";
-    hls = "2.9.0.0";
+    hls = "2.10.0.0";
   };
   ghc-9-4-8 = ghcCheck {
     packageName = "ghc-9-4-8";
     ghc = "9.4.8";
     weeder = "2.9.0";
-    hls = "2.9.0.0";
+    hls = "2.10.0.0";
   };
   ghc-9-6-3 = ghcCheck {
     packageName = "ghc-9-6-3";
