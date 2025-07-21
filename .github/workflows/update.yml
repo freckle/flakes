@@ -23,6 +23,7 @@ jobs:
           - nixpkgs-23-11
           - nixpkgs-24-05
           - nixpkgs-24-11
+          - nixpkgs-25-05
           - nixpkgs-haskell-updates
           - stack-lint-extra-deps
     steps:
