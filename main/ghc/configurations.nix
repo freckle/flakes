@@ -123,7 +123,7 @@ in
   ghc-9-4-7 =
     { packageSelection, enableHLS }:
     let
-      nixpkgs = inputs.nixpkgs-24-11.legacyPackages.${system};
+      nixpkgs = inputs.nixpkgs-25-05.legacyPackages.${system};
       name = "ghc947";
       inherit (nixpkgs) haskell;
       haskellPackages = haskell.packages.${name};
@@ -147,7 +147,7 @@ in
   ghc-9-4-8 =
     { packageSelection, enableHLS }:
     let
-      nixpkgs = inputs.nixpkgs-24-11.legacyPackages.${system};
+      nixpkgs = inputs.nixpkgs-25-05.legacyPackages.${system};
       name = "ghc948";
       inherit (nixpkgs) haskell;
       haskellPackages = haskell.packages.${name};
