@@ -1,6 +1,6 @@
 { inputs, system, ... }:
 let
-  nixpkgs = inputs.nixpkgs-24-11.legacyPackages.${system};
+  nixpkgs = inputs.nixpkgs-25-05.legacyPackages.${system};
   inherit (nixpkgs.haskell.lib) justStaticExecutables;
   inherit (builtins) getFlake;
 in
@@ -19,5 +19,6 @@ rec {
 
   stack-lint-extra-deps-1-3-0 =
     justStaticExecutables
-      inputs.stack-lint-extra-deps.packages.${system}.stack-lint-extra-deps;
+      (getFlake "github:freckle/stack-lint-extra-deps/v1.3.0.7")
+      .packages.${system}.stack-lint-extra-deps;
 }
