@@ -242,22 +242,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-haskell-updates_2": {
-      "locked": {
-        "lastModified": 1742210880,
-        "narHash": "sha256-bFR9Tthdaz1mR/IzdtHgzPuw5nEHn49AWay8iUqFEPM=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "1f00f46d8b14f6956005ab80f2e0e9c875d0dace",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "haskell-updates",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs-stable": {
       "locked": {
         "lastModified": 1736200483,
@@ -287,38 +271,6 @@
         "owner": "NixOS",
         "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1742136038,
-        "narHash": "sha256-DDe16FJk18sadknQKKG/9FbwEro7A57tg9vB5kxZ8kY=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "a1185f4064c18a5db37c5c84e5638c78b46e3341",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-24.11",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "pgp-wordlist": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1714149562,
-        "narHash": "sha256-WCFQgtWqq+gLst4lXkFYlmlW7L8PQOJfChsKMApy3Ng=",
-        "owner": "quchen",
-        "repo": "pgp-wordlist",
-        "rev": "1f0cfd90d62179952cbfd59c3405283a1d364272",
-        "type": "github"
-      },
-      "original": {
-        "owner": "quchen",
-        "repo": "pgp-wordlist",
         "type": "github"
       }
     },
@@ -354,44 +306,7 @@
         "nixpkgs-24-11": "nixpkgs-24-11",
         "nixpkgs-25-05": "nixpkgs-25-05",
         "nixpkgs-haskell-updates": "nixpkgs-haskell-updates",
-        "nixpkgs-stable": "nixpkgs-stable",
-        "stack-lint-extra-deps": "stack-lint-extra-deps"
-      }
-    },
-    "stack-lint-extra-deps": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_3",
-        "nixpkgs-haskell-updates": "nixpkgs-haskell-updates_2",
-        "pgp-wordlist": "pgp-wordlist",
-        "stacklock2nix": "stacklock2nix"
-      },
-      "locked": {
-        "lastModified": 1744218263,
-        "narHash": "sha256-DZg4hwzEe63oiaFRxyH2ek08cOVDrrFXpU2HzbtJE4I=",
-        "owner": "freckle",
-        "repo": "stack-lint-extra-deps",
-        "rev": "3ccabc07f47e244ee42d9841774739849d69cd78",
-        "type": "github"
-      },
-      "original": {
-        "owner": "freckle",
-        "repo": "stack-lint-extra-deps",
-        "type": "github"
-      }
-    },
-    "stacklock2nix": {
-      "locked": {
-        "lastModified": 1741332755,
-        "narHash": "sha256-ZQlzcx4f2cx4CQBQzMvEwJEAWJrfZEdZrGY7Iu5L9MA=",
-        "owner": "cdepillabout",
-        "repo": "stacklock2nix",
-        "rev": "47dd3fb2827fc0868142ab41a7daeaec0a6ddda1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "cdepillabout",
-        "repo": "stacklock2nix",
-        "type": "github"
+        "nixpkgs-stable": "nixpkgs-stable"
       }
     },
     "systems": {
