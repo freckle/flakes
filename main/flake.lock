@@ -81,11 +81,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1748414054,
-        "narHash": "sha256-KbMZWjOOgtbTKcHTu8UaGCpXSlyfovW579+kwkrSTZc=",
+        "lastModified": 1752914035,
+        "narHash": "sha256-QghINu6JPxiUyK3XSBhjgT/CvFez4hL8hGwfNvr9vPI=",
         "owner": "Haskell-OpenAPI-Code-Generator",
         "repo": "Haskell-OpenAPI-Client-Code-Generator",
-        "rev": "7d92dfe66c242b492ed13f1f69ef45667b0233df",
+        "rev": "08fa0eb1d2baef4e3f328ae155bd0ff4ad08efcf",
         "type": "github"
       },
       "original": {
