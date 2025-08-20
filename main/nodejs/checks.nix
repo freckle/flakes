@@ -110,4 +110,10 @@ in
     yarn = "1.22.19";
     pnpm = "8.15.1";
   };
+  nodejs-20-19-4 = nodeCheck {
+    packageName = "nodejs-20-19-4";
+    node = "20.19.4";
+    yarn = "1.22.22";
+    pnpm = "10.14.0";
+  };
 }
