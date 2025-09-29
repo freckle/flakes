@@ -39,7 +39,7 @@
       githubActions = inputs.nix-github-actions.lib.mkGithubMatrix {
         checks = inputs.nixpkgs-stable.lib.getAttrs systems inputs.self.checks;
         platforms = {
-          "x86_64-linux" = "ubuntu-22.04";
+          "x86_64-linux" = "ubuntu-24.04";
           "x86_64-darwin" = "macos-13";
           "aarch64-darwin" = "macos-14";
         };
