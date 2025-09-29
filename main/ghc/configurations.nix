@@ -400,7 +400,7 @@ in
   ghc-9-10-2 =
     { packageSelection, enableHLS }:
     let
-      nixpkgs = inputs.nixpkgs-haskell-updates.legacyPackages.${system};
+      nixpkgs = inputs.nixpkgs-unstable.legacyPackages.${system};
       name = "ghc9102";
       inherit (nixpkgs) haskell;
       haskellPackages = haskell.packages.${name};
