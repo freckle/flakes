@@ -130,22 +130,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-22-11": {
-      "locked": {
-        "lastModified": 1688392541,
-        "narHash": "sha256-lHrKvEkCPTUO+7tPfjIcb7Trk6k31rz18vkyqmkeJfY=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "ea4c80b39be4c09702b0cb3b42eab59e2ba4f24b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-22.11",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs-23-05": {
       "locked": {
         "lastModified": 1704290814,
@@ -299,7 +283,6 @@
         "flake-utils": "flake-utils",
         "haskell-openapi-code-generator": "haskell-openapi-code-generator",
         "nix-github-actions": "nix-github-actions",
-        "nixpkgs-22-11": "nixpkgs-22-11",
         "nixpkgs-23-05": "nixpkgs-23-05",
         "nixpkgs-23-11": "nixpkgs-23-11",
         "nixpkgs-24-05": "nixpkgs-24-05",
