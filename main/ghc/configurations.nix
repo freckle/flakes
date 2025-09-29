@@ -45,7 +45,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-2-8 =
@@ -69,7 +70,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-4-5 =
@@ -93,7 +95,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-4-6 =
@@ -117,7 +120,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-4-7 =
@@ -141,7 +145,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-4-8 =
@@ -165,7 +170,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-6-3 =
@@ -189,7 +195,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-6-4 =
@@ -213,7 +220,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-6-5 =
@@ -237,7 +245,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-6-6 =
@@ -261,7 +270,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-8-1 =
@@ -285,7 +295,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-8-2 =
@@ -309,7 +320,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-8-3 =
@@ -333,7 +345,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-8-4 =
@@ -357,7 +370,8 @@ in
         weeder
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-10-1 =
@@ -379,7 +393,8 @@ in
         ghcWithPackages
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 
   ghc-9-10-2 =
@@ -401,6 +416,30 @@ in
         ghcWithPackages
         cabal
         stack
-      ] ++ (if enableHLS then [ hls ] else [ ]);
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
+    };
+
+  ghc-9-10-3 =
+    { packageSelection, enableHLS }:
+    let
+      nixpkgs = inputs.nixpkgs-unstable.legacyPackages.${system};
+      name = "ghc9103";
+      inherit (nixpkgs) haskell;
+      haskellPackages = haskell.packages.${name};
+      ghcWithPackages = haskellPackages.ghcWithPackages packageSelection;
+      inherit (haskell.lib) justStaticExecutables;
+      hls = nixpkgs.haskell-language-server.override { supportedGhcVersions = [ "9103" ]; };
+      cabal = nixpkgs.cabal-install;
+      stack = import ./stack.nix { inherit nixpkgs; };
+    in
+    symlinkJoin {
+      inherit name;
+      paths = [
+        ghcWithPackages
+        cabal
+        stack
+      ]
+      ++ (if enableHLS then [ hls ] else [ ]);
     };
 }
