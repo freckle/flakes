@@ -2,7 +2,7 @@
 let
   inherit (builtins) getFlake;
 
-  inherit (inputs.nixpkgs-24-11.legacyPackages.${system}) symlinkJoin;
+  inherit (inputs.nixpkgs-25-05.legacyPackages.${system}) symlinkJoin;
 
   addPatches = patches: prev: { patches = (prev.patches or [ ]) ++ patches; };
 
@@ -361,7 +361,7 @@ in
       weeder = justStaticExecutables haskellPackages.weeder;
       hls = nixpkgs.haskell-language-server.override { supportedGhcVersions = [ "984" ]; };
       cabal = nixpkgs.cabal-install;
-      stack = import ./stack.nix { nixpkgs = inputs.nixpkgs-24-11.legacyPackages.${system}; };
+      stack = import ./stack.nix { nixpkgs = inputs.nixpkgs-25-05.legacyPackages.${system}; };
     in
     symlinkJoin {
       inherit name;

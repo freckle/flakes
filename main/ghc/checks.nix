@@ -10,7 +10,7 @@ let
   inherit (nixpkgs) writeText runCommand;
   inherit (nixpkgs.lib.attrsets) recursiveUpdate;
   inherit (nixpkgs.testers) testEqualContents;
-  inherit (inputs.nixpkgs-24-11.lib) optionalString concatLines;
+  inherit (inputs.nixpkgs-25-05.lib) optionalString concatLines;
 
   ghcCheck =
     {

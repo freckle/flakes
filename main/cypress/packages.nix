@@ -3,7 +3,7 @@ let
   makeCypress =
     { version, sha256 }:
     let
-      nixpkgs = inputs.nixpkgs-24-11.legacyPackages.${system};
+      nixpkgs = inputs.nixpkgs-25-05.legacyPackages.${system};
     in
     nixpkgs.cypress.overrideAttrs (oldAttrs: rec {
       pname = "cypress";

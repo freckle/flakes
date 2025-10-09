@@ -97,7 +97,7 @@
     "nix-github-actions": {
       "inputs": {
         "nixpkgs": [
-          "nixpkgs-24-11"
+          "nixpkgs-25-05"
         ]
       },
       "locked": {
