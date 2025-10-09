@@ -53,7 +53,7 @@ let
 
   v0-14 =
     let
-      nixpkgs = inputs.nixpkgs-stable.legacyPackages.${system};
+      nixpkgs = inputs.nixpkgs-24-11.legacyPackages.${system};
       inherit (nixpkgs) haskell;
       inherit (haskell.lib) justStaticExecutables overrideCabal;
     in
