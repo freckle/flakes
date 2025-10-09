@@ -1,7 +1,7 @@
 { inputs, system, ... }:
 let
   inherit (builtins) getFlake;
-  inherit (inputs.nixpkgs-stable.legacyPackages.${system}) symlinkJoin runCommand;
+  inherit (inputs.nixpkgs-25-05.legacyPackages.${system}) symlinkJoin runCommand;
 in
 rec {
   nodejs-18-x = nodejs-18-20-x;

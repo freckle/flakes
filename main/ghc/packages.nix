@@ -1,6 +1,6 @@
 { inputs, system, ... }:
 let
-  nixpkgs = inputs.nixpkgs-stable.legacyPackages.${system};
+  nixpkgs = inputs.nixpkgs-25-05.legacyPackages.${system};
   configurations = import ./configurations.nix { inherit inputs system; };
   applyDefaultVersions = import ./default-versions-function.nix;
   configurationToPackage =
