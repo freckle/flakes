@@ -17,6 +17,7 @@ let
     ./nodejs/checks.nix
     ./prettier/checks.nix
     ./stack-lint-extra-deps/checks.nix
+    ./stack2cabal/checks.nix
   ];
 in
 flattenAttrs (
