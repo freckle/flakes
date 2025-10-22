@@ -20,10 +20,6 @@ let
       '';
     };
 in
-if system == "aarch64-darwin" then
-  # https://github.com/hasufell/stack2cabal/issues/50
-  { }
-else
-  {
-    stack2cabal-1-0-14 = versionCheck "1.0.14" packages.stack2cabal-1-0-14;
-  }
+{
+  stack2cabal-1-0-14 = versionCheck "1.0.14" packages.stack2cabal-1-0-14;
+}
