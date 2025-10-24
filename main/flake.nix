@@ -44,7 +44,17 @@
       };
     };
   nixConfig = {
-    extra-substituters = [ "https://freckle.cachix.org" ];
-    extra-trusted-public-keys = [ "freckle.cachix.org-1:WnI1pZdwLf2vnP9Fx7OGbVSREqqi4HM2OhNjYmZ7odo=" ];
+    extra-substituters = [
+      "https://freckle.cachix.org"
+
+      # https://github.com/input-output-hk/iogx/blob/main/doc/nix-setup-guide.md#setting-up-iog-binary-cache
+      "https://cache.iog.io"
+    ];
+    extra-trusted-public-keys = [
+      "freckle.cachix.org-1:WnI1pZdwLf2vnP9Fx7OGbVSREqqi4HM2OhNjYmZ7odo="
+
+      # https://github.com/input-output-hk/iogx/blob/main/doc/nix-setup-guide.md#setting-up-iog-binary-cache
+      "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+    ];
   };
 }
