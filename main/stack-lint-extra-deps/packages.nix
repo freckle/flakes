@@ -19,6 +19,6 @@ rec {
 
   stack-lint-extra-deps-1-3-0 =
     justStaticExecutables
-      (getFlake "github:freckle/stack-lint-extra-deps/v1.3.0.7")
+      (getFlake "github:freckle/stack-lint-extra-deps/67ea9a99ffe61518fcd46e9e8cba3da559defa01")
       .packages.${system}.stack-lint-extra-deps;
 }
