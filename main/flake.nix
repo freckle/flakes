@@ -4,7 +4,7 @@
     haskell-openapi-code-generator.url = "github:Haskell-OpenAPI-Code-Generator/Haskell-OpenAPI-Client-Code-Generator";
     nix-github-actions.inputs.nixpkgs.follows = "nixpkgs-25-05";
     nix-github-actions.url = "github:nix-community/nix-github-actions";
-    nixpkgs-23-05.url = "github:nixos/nixpkgs/nixos-23.05";
+    nixpkgs-23-05.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-23-11.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-24-05.url = "github:nixos/nixpkgs/nixos-24.05";
     nixpkgs-24-11.url = "github:nixos/nixpkgs/nixos-24.11";
