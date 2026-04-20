@@ -16,7 +16,6 @@
     let
       systems = [
         "x86_64-linux"
-        "x86_64-darwin"
         "aarch64-darwin"
       ];
     in
@@ -38,7 +37,6 @@
         checks = inputs.nixpkgs-25-05.lib.getAttrs systems inputs.self.checks;
         platforms = {
           "x86_64-linux" = "ubuntu-24.04";
-          "x86_64-darwin" = "macos-13";
           "aarch64-darwin" = "macos-14";
         };
       };
